@@ -1,0 +1,133 @@
+<div class="row" style="height:250px;">
+  <div class="col-sm-12">
+    <div class="jumbotron" style="background-color: #f5f6f5;">
+      <div class="row">
+        <div class="col-sm-6">
+          <img class="img-responsive" src="/images/angular.png" alt="...">
+        </div>
+        <div class="col-sm-6"
+        <p>I denne introduksjonen vil de enkleste og mest sentrale begrepene presenteres, slik som:
+          <b>App</b>,
+          <b>Controllers</b>,
+          <b>Directives</b>,
+          <b>Filters</b>,
+          <b>Services</b> og
+          <b>Pre-definerte Directives</b>
+        </p>
+        <p>Dette er kun et lite dykk inn i Angular, ingen komplett guide.</p>
+        <p>Verktøyene som blir brukt er:
+          <a href="http://yeoman.io/" target="_blank">Yeoman</a>,
+          <a href="http://gruntjs.com/" target="_blank">Grunt</a>,
+          <a href="http://bower.io/" target="_blank">Bower</a>,
+          <a href="https://nodejs.org/" target="_blank">Node</a>,
+          <a href="https://github.com/" target="_blank">Git</a>
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+<div class="row">
+  <div class="col-sm-3">
+    <div ng-class="getClass()">
+      <div class="list-group">
+        <a ng-class="{active: getActive('sec1'), '' : !getActive('sec1')}"  ng-click="scrollTo('sec1')" class="list-group-item"><span class="header2">Generelt</span></a>
+        <a ng-class="{active: getActive('sec2'), '' : !getActive('sec2')}"  ng-click="scrollTo('sec2')" class="list-group-item"><span class="header2">Oppstart</span></a>
+        <a ng-class="{active: getActive('sec3'), '' : !getActive('sec3')}"  ng-click="scrollTo('sec3')" class="list-group-item"><span class="header2">Din første app</span></a>
+        <a ng-class="{active: getActive('sec4'), '' : !getActive('sec4')}"  ng-click="scrollTo('sec4')" class="list-group-item"><span class="header2">Controllers</span></a>
+        <a ng-class="{active: getActive('sec5'), '' : !getActive('sec5')}"  ng-click="scrollTo('sec5')" class="list-group-item"><span class="header2">Filters</span></a>
+        <a ng-class="{active: getActive('sec6'), '' : !getActive('sec6')}"  ng-click="scrollTo('sec6')" class="list-group-item"><span class="header2">Services</span></a>
+        <a ng-class="{active: getActive('sec7'), '' : !getActive('sec7')}"  ng-click="scrollTo('sec7')" class="list-group-item"><span class="header2">Nyttige Directives</span></a>
+        <a ng-class="{active: getActive('sec8'), '' : !getActive('sec8')}"  ng-click="scrollTo('sec8')" class="list-group-item"><span class="header2">Directives</span></a>
+      </div>
+    </div>
+  </div>
+  <div class="col-sm-1">
+  </div>
+  <div class="col-sm-8">
+    <div id="generelt">
+      <h2 id="sec1" style="margin-top:0px;">Headline Example</h2>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+      </p>
+    </div>
+    <div id="oppstart">
+      <h2 id="sec2">Oppstart</h2>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+      </p>
+      <pre>
+        <code class="xml hljs"><span class="hljs-pi">&lt;?xml version="1.0"?&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-title">response</span> <span class="hljs-attribute">value</span>=<span class="hljs-value">"ok"</span> <span class="hljs-attribute">xml:lang</span>=<span class="hljs-value">"en"</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-title">text</span>&gt;</span>Ok<span class="hljs-tag">&lt;/<span class="hljs-title">text</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-title">comment</span> <span class="hljs-attribute">html_allowed</span>=<span class="hljs-value">"true"</span>/&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-title">ns1:description</span>&gt;</span><span class="hljs-cdata">&lt;![CDATA[
+            CDATA is &lt;not&gt; magical.
+            ]]&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">ns1:description</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span> <span class="hljs-tag">&lt;<span class="hljs-title">a</span>/&gt;</span>
+            <span class="hljs-tag">&lt;/<span class="hljs-title">response</span>&gt;</span>
+
+
+            <span class="hljs-doctype">&lt;!DOCTYPE html&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">title</span>&gt;</span>Title<span class="hljs-tag">&lt;/<span class="hljs-title">title</span>&gt;</span>
+
+            <span class="hljs-tag">&lt;<span class="hljs-title">style</span>&gt;</span><span class="css"><span class="hljs-tag">body</span> <span class="hljs-rules">{<span class="hljs-rule"><span class="hljs-attribute">width</span>:<span class="hljs-value"> <span class="hljs-number">500px</span></span></span>;<span class="hljs-rule">}</span></span></span><span class="hljs-tag">&lt;/<span class="hljs-title">style</span>&gt;</span>
+
+            <span class="hljs-tag">&lt;<span class="hljs-title">script</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"application/javascript"</span>&gt;</span><span class="javascript">
+              <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">$init</span><span class="hljs-params">()</span> </span>{<span class="hljs-keyword">return</span> <span class="hljs-literal">true</span>;}
+            </span><span class="hljs-tag">&lt;/<span class="hljs-title">script</span>&gt;</span>
+
+            <span class="hljs-tag">&lt;<span class="hljs-title">body</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">p</span> <span class="hljs-attribute">checked</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"title"</span> <span class="hljs-attribute">id</span>=<span class="hljs-value">'title'</span>&gt;</span>Title<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
+            <span class="hljs-comment">&lt;!-- here goes the rest of the page --&gt;</span>
+            <span class="hljs-tag">&lt;/<span class="hljs-title">body</span>&gt;</span>
+          </code>
+        </pre>
+      </div>
+      <div id="forsteapp">
+        <h2 id="sec3">Din første app</h2>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+          quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+        </p>
+      </div>
+      <div id="controllers">
+        <h2 id="sec4">Controllers</h2>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+          quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+        </p>
+      </div>
+      <div id="filters">
+        <h2 id="sec5">Filters</h2>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+          quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+        </p>
+      </div>
+      <div id="services">
+        <h2 id="sec6">Services</h2>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+          quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+        </p>
+      </div>
+      <div id="ndirectives">
+        <h2 id="sec7">Nyttige Directives</h2>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+          quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+        </p>
+      </div>
+      <div id="directives">
+        <h2 id="sec8">Egne Directives</h2>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+          quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+        </p>
+      </div>
+    </div>
+  </div>
+  {{getClass()}}
